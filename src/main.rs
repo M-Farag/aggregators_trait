@@ -42,5 +42,12 @@ fn main() {
     println!("Max value is: {}",x.max());
 
     println!("Greetings with a default implementation: {}", x.greetings());
+
+    println!("Thing -> ");
+    thing(&x);
 }
 
+
+fn thing(item: &impl Aggregators){
+    println!("Min is: {}, Max is: {}, and greeting is: {}",item.min(),item.max(),item.greetings())
+}
