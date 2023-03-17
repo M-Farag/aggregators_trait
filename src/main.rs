@@ -40,4 +40,7 @@ fn main() {
 
     println!("Min value is: {}",x.min());
     println!("Max value is: {}",x.max());
+
+    println!("Greetings with a default implementation: {}", x.greetings());
 }
+
