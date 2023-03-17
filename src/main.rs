@@ -45,9 +45,15 @@ fn main() {
 
     println!("Thing -> ");
     thing(&x);
+    thing2(&x);
 }
 
 
 fn thing(item: &impl Aggregators){
+    println!("Min is: {}, Max is: {}, and greeting is: {}",item.min(),item.max(),item.greetings())
+}
+
+// Trait bound syntax
+fn thing2<T: Aggregators> (item: &T){
     println!("Min is: {}, Max is: {}, and greeting is: {}",item.min(),item.max(),item.greetings())
 }
